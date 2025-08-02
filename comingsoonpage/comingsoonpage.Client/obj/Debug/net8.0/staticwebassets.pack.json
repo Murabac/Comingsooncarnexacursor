@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\lappybooks\\MurabacApps\\comingsoonpage\\comingsoonpage\\comingsoonpage.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\lappybooks\\MurabacApps\\comingsoonpage\\comingsoonpage\\comingsoonpage.Client\\obj\\Debug\\net8.0\\compressed\\isuiucwxtu.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\lappybooks\\MurabacApps\\comingsoonpage\\comingsoonpage\\comingsoonpage.Client\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
+      "Id": "C:\\Users\\lappybooks\\MurabacApps\\comingsoonpage\\comingsoonpage\\comingsoonpage.Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.comingsoonpage.Client.props",
+      "PackagePath": "build\\comingsoonpage.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.comingsoonpage.Client.props",
+      "PackagePath": "buildMultiTargeting\\comingsoonpage.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.comingsoonpage.Client.props",
+      "PackagePath": "buildTransitive\\comingsoonpage.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.comingsoonpage.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

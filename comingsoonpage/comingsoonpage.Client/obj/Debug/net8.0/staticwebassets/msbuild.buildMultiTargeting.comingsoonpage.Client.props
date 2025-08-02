@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\comingsoonpage.Client.props" />
+</Project>
