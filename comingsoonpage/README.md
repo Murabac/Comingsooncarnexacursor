@@ -13,45 +13,51 @@ A modern, responsive coming soon page for Carnexa - The Ultimate Auto Platform.
 
 ## 🚀 Deploy to GitHub Pages
 
-### Option 1: Automatic Deployment (Recommended)
+### Option 1: Static Site Deployment (Recommended)
 
 1. **Push to GitHub**: Upload this project to a GitHub repository
 2. **Enable GitHub Pages**: 
    - Go to your repository Settings
    - Navigate to Pages section
    - Set Source to "GitHub Actions"
-3. **Automatic Deployment**: The GitHub Actions workflow will automatically build and deploy your site when you push to the main branch
+3. **Automatic Deployment**: The GitHub Actions workflow will automatically deploy your site when you push to the main branch
 
 ### Option 2: Manual Deployment
 
-1. **Build the project**:
-   ```bash
-   cd comingsoonpage/comingsoonpage
-   dotnet publish -c Release -o ./publish
-   ```
-
-2. **Upload to GitHub Pages**:
-   - Copy the contents of `publish/wwwroot/` to your GitHub Pages branch
+1. **Copy static files**:
+   - Copy the contents of the `static/` folder to your GitHub Pages branch
    - Or use the GitHub Actions workflow provided
 
 ## 🛠️ Local Development
 
-1. **Clone the repository**
-2. **Navigate to the project**:
+### For Static Version (Recommended for GitHub Pages):
+1. **Open the static folder**:
+   ```bash
+   cd static
+   ```
+2. **Open index.html** in your browser or use a local server
+
+### For Blazor Version (Local development):
+1. **Navigate to the project**:
    ```bash
    cd comingsoonpage/comingsoonpage
    ```
-3. **Run the application**:
+2. **Run the application**:
    ```bash
    dotnet run
    ```
-4. **Open in browser**: http://localhost:5042
+3. **Open in browser**: http://localhost:5042
 
 ## 📁 Project Structure
 
 ```
 comingsoonpage/
-├── comingsoonpage/
+├── static/                          # Static version for GitHub Pages
+│   ├── index.html                   # Main HTML file
+│   ├── styles.css                   # All CSS styles
+│   ├── logo.png                     # Carnexa logo
+│   └── favicon.png                  # Site favicon
+├── comingsoonpage/                  # Blazor version (for local development)
 │   ├── Components/
 │   │   ├── Pages/
 │   │   │   └── Home.razor          # Main coming soon page
@@ -66,7 +72,8 @@ comingsoonpage/
 │   └── Program.cs                  # Application entry point
 └── .github/
     └── workflows/
-        └── deploy.yml              # GitHub Actions deployment
+        ├── deploy.yml              # Blazor deployment (complex)
+        └── deploy-static.yml       # Static deployment (simple)
 ```
 
 ## 🎨 Customization
@@ -78,10 +85,10 @@ The site uses a dark theme with:
 - **Text Colors**: White and light grays
 
 ### Logo
-Replace `wwwroot/bootstrap/logo.png` with your own logo.
+Replace `static/logo.png` with your own logo.
 
 ### Content
-Edit `Components/Pages/Home.razor` to modify:
+Edit `static/index.html` to modify:
 - Company name and tagline
 - Description text
 - Launch date
@@ -101,10 +108,18 @@ The page is fully responsive and optimized for:
 
 ## 🔧 Technologies Used
 
-- **Blazor WebAssembly** (.NET 8.0)
-- **Bootstrap 5** for responsive design
+- **HTML5** with semantic markup
 - **CSS3** with modern features (Grid, Flexbox, Animations)
+- **JavaScript** for interactive elements
+- **Bootstrap 5** (CDN) for responsive design
 - **GitHub Actions** for automated deployment
+
+## 🚨 Important Notes
+
+- **Use the `static/` folder** for GitHub Pages deployment
+- **The Blazor version** is for local development only
+- **Static version** has all the same features but works perfectly on GitHub Pages
+- **No build process required** for the static version
 
 ## 📄 License
 
