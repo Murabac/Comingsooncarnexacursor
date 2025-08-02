@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore comingsoonpage/comingsoonpage/comingsoonpage.csproj
+      
+    - name: Build
+      run: dotnet build comingsoonpage/comingsoonpage/comingsoonpage.csproj --no-restore --configuration Release
+      
+    - name: Publish
+      run: dotnet publish comingsoonpage/comingsoonpage/comingsoonpage.csproj --no-restore --configuration Release --output ./publish
+      
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./publish/wwwroot 
